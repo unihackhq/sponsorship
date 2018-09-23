@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel ./pages/index.hbs --no-cache",
+    "now-build": "parcel build --out-dir=/public ./pages/index.hbs"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,9 @@
   },
   "homepage": "https://github.com/unihackhq/sponsorship-demo#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.9.7"
+    "autoprefixer": "^9.1.5",
+    "parcel-bundler": "^1.9.7",
+    "parcel-plugin-handlebars": "^0.4.4",
+    "postcss-modules": "^1.3.2"
   }
 }
