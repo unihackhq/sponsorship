@@ -47,6 +47,11 @@ body {
   flex: 1 1 1px;
   text-align: center;
   font-weight: 700;
+  margin: 10px;
+}
+
+.pkg-table__header .pkg-table__cell {
+  border-radius: 10px;
 }
 
 .pkg-table__header .pkg-table__content-cell,
