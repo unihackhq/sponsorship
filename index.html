@@ -10,10 +10,13 @@
     <meta name="description" content="UNIHACK Sponsorship">
     <meta name="keywords" content="unihack,hackathon,sponsorship">
 
-    <!-- load css async -->
-    <link rel="preload" href="normalize.css" as="style" onload="this.rel='stylesheet'">
     <!-- render above the fold content -->
     <style type="text/css">
+      /* hide anything not styled here */
+      body > :not(.above-fold) {
+        visibility: hidden;
+      }
+
       .container {
         max-width: 900px;
         margin: auto;
@@ -21,7 +24,7 @@
       }
 
       .image-section {
-        min-height: 40vh;
+        min-height: 60vh;
       }
 
       .hero {
@@ -33,27 +36,205 @@
       .hero .container {
         flex: 0 1 900px;
       }
+
     </style>
-    <link rel="preload" href="index.css" as="style" onload="this.rel='stylesheet'">
+    <!-- load css async -->
+    <link rel="stylesheet" href="normalize.css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" href="index.css" media="none" onload="if(media!='all')media='all'">
+    <noscript>
+      <link rel="stylesheet" href="normalize.css">
+      <link rel="stylesheet" href="index.css">
+    </noscript>
   </head>
   <body>
-    <section class="image-section hero">
+    <!-- HERO SECTION -->
+    <section class="image-section hero above-fold">
       <div class="container">
         <h1>UNIHACK</h1>
         <p>Something something good!</p>
         <p>- CEO of Botch</p>
       </div>
     </section>
-    <section class="container">
+    <!-- ABOUT UNIHACK SECTION -->
+    <section class="container above-fold">
       <h1>What is UNIHACK?</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Amet nisl suscipit adipiscing bibendum est ultricies. Semper viverra nam libero justo. Amet massa vitae tortor condimentum. Aliquam etiam erat velit scelerisque in dictum. Nibh praesent tristique magna sit amet purus gravida. Lectus arcu bibendum at varius vel. Pellentesque dignissim enim sit amet venenatis urna. Ut lectus arcu bibendum at varius vel pharetra. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Purus in massa tempor nec feugiat nisl pretium fusce id. Sed arcu non odio euismod lacinia at quis risus sed. Amet massa vitae tortor condimentum lacinia quis vel eros. Vitae et leo duis ut diam quam nulla porttitor massa. Ultricies leo integer malesuada nunc vel risus.</p>
+      <p>Elementum eu facilisis sed odio morbi quis commodo odio aenean. Nunc sed augue lacus viverra vitae. Eleifend donec pretium vulputate sapien nec sagittis. Non nisi est sit amet facilisis magna. Mauris ultrices eros in cursus turpis massa. Nunc sed id semper risus in hendrerit. Integer vitae justo eget magna. In vitae turpis massa sed elementum tempus. Justo eget magna fermentum iaculis eu non diam phasellus. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nuncconsequatinterdum varius sit amet mattis vulputate enim nulla. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Urna molestie at elementum eu facilisis sed odio morbi.</p>
       <a target="_blank" href="https://unihack.net/about/">About Us</a>
     </section>
+    <!-- PACKAGES TABLE SECTION -->
     <section class="container">
       <h1>Get Involved</h1>
       <!-- fake table -->
-      <div style="height: 500px; background: #aaa; display: flex; justify-content: center;">
-        <p style="margin: auto;">Packages</p>
+      <div class="pkg-table">
+        <div class="pkg-table__header">
+          <div class="pkg-table__content-cell">
+            Packages
+          </div>
+          <div class="pkg-table__cell">
+            <div class="pkg-table__title">
+              Community
+            </div>
+            <div class="pkg-table__price">
+              $750
+            </div>
+          </div>
+          <div class="pkg-table__cell">
+            <div class="pkg-table__title">
+              Silver
+            </div>
+            <div class="pkg-table__price">
+              $1,500
+            </div>
+          </div>
+          <div class="pkg-table__cell">
+            <div class="pkg-table__title">
+              Gold
+            </div>
+            <div class="pkg-table__price">
+              $5,000
+            </div>
+          </div>
+          <div class="pkg-table__cell">
+            <div class="pkg-table__title">
+              Platinum
+            </div>
+            <div class="pkg-table__price">
+              $10,000
+            </div>
+          </div>
+          <div class="pkg-table__cell">
+            <div class="pkg-table__title__sup">
+              hyper
+            </div>
+            <div class="pkg-table__title">
+              Platinum
+            </div>
+            <div class="pkg-table__price">
+              $30,000
+            </div>
+          </div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Company Giveaways
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            API & Tools Roundup
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Mailouts and Announcements
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Mentors
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell">1</div>
+          <div class="pkg-table__cell">2</div>
+          <div class="pkg-table__cell">4</div>
+          <div class="pkg-table__cell">6</div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Guests
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell">1</div>
+          <div class="pkg-table__cell">2</div>
+          <div class="pkg-table__cell">3</div>
+          <div class="pkg-table__cell">4</div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Run Recruitment Campagins
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Your Company Logo on all UNIHACK merchandise
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Video Promotions
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Your Company Logo on all UNIHACK 
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Careers Fair
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Judging Panel
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Company Name beside UNIHACK logo
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
       </div>
     </section>
     <section class="container">
