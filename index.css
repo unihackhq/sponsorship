@@ -6,14 +6,6 @@ body > :not(.above-fold) {
 /*
  * GENERAL STUFF
  */
-html {
-  font-size: 16px;
-}
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  line-height: 1.5;
-}
-
 .btn {
   -webkit-appearance: none;
   background: #f0f0f0;
