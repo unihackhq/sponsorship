@@ -74,8 +74,8 @@ html {
   border-radius: 10px;
 }
 
-.pkg-table__header .pkg-table__content-cell,
-.pkg-table__header .pkg-table__cell {
+.pkg-table__content-cell,
+.pkg-table__cell {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
