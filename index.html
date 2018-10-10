@@ -29,7 +29,7 @@
       }
 
       .container {
-        max-width: 900px;
+        max-width: 1000px;
         margin: auto;
         padding: 20px;
       }
@@ -42,16 +42,55 @@
         background: #ccc;
         display: flex;
         justify-content: center;
+        position: relative;
+        background-image: url(hero.jpg);
+        background-size: cover;
+        background-position: center;
+        color: #fff;
       }
 
       .hero .container {
-        flex: 0 1 900px;
+        flex: 0 1 1000px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: start;
+      }
+
+      .hero p {
+        margin: 0;
+        margin-bottom: 1em;
+        background: white;
+        color: black;
+        padding: 7px 20px;
+        font-size: 1.4em;
+      }
+
+      .hero-logo {
+        position: absolute;
+        top: 20px;
+        display: flex;
+      }
+
+      .hero-logo__img {
+        background-image: url(logo.svg);
+        background-size: 31px 40px;
+        height: 40px;
+        width: 31px;
+        margin: 4px 5px 4px 0;
+      }
+
+      .hero-logo__name {
+        margin: 0;
+        font-family: "Rubik",sans-serif;
+        font-weight: 500;
+        letter-spacing: -2px;
       }
 
     </style>
     <!-- load css async -->
     <link rel="preload" href="normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:500" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="normalize.css">
       <link rel="stylesheet" href="index.css">
@@ -63,9 +102,12 @@
     <!-- HERO SECTION -->
     <section class="image-section hero above-fold">
       <div class="container">
-        <h1>UNIHACK</h1>
+        <div class="hero-logo">
+          <div class="hero-logo__img"></div>
+          <h1 class="hero-logo__name">UNIHACK</h1>
+        </div>
         <p>Something something good!</p>
-        <p>- CEO of Botch</p>
+        <p>- CEO of Bosch</p>
       </div>
     </section>
     <!-- ABOUT UNIHACK SECTION -->

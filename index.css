@@ -3,6 +3,14 @@ body > :not(.above-fold) {
   visibility: visible;
 }
 
+/* Tiny bit of normalize */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /*
  * GENERAL STUFF
  */
@@ -70,7 +78,7 @@ body > :not(.above-fold) {
 .pkg-table__header .pkg-table__cell {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center
+  justify-content: center;
 }
 
 .pkg-table__title__sup {
