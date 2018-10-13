@@ -362,6 +362,26 @@
           <div class="pkg-table__cell" data-included="n"></div>
           <div class="pkg-table__cell" data-included="y"></div>
         </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Enquire about sponsorship
+          </div>
+          <div class="pkg-table__cell">
+            <button class="btn" id="com-table">Select Community</button>
+          </div>
+          <div class="pkg-table__cell">
+            <button class="btn" id="silver-table">Select Silver</button>
+          </div>
+          <div class="pkg-table__cell">
+            <button class="btn" id="gold-table">Select Gold</button>
+          </div>
+          <div class="pkg-table__cell">
+            <button class="btn" id="plat-table">Select Platinum</button>
+          </div>
+          <div class="pkg-table__cell">
+            <button class="btn" id="hyper-table">Select Hyper Platinum</button>
+          </div>
+        </div>
       </div>
     </section>
     <section class="container">
@@ -396,7 +416,7 @@
         <button>Download Prospectus</button>
       </div>
     </section>
-    <section class="container">
+    <section class="container" id="enquire">
       <a name="interested"><h1>Interested?</h1></a>
       <div style="display: flex; flex-direction: column;">
         <div style="display: flex">
@@ -405,9 +425,16 @@
           </div>
           <div style="flex: 2 0 0;">
             <form id="tiers">
-              <input type="radio" name="tier" value="1">Tier 1
-              <input type="radio" name="tier" value="2">Tier 2
-              <input type="radio" name="tier" value="3"> Tier 3
+              <input id="com-radio" type="radio" name="tier" value="Community">
+              <label for="com-radio">Community</label>
+              <input id="silver-radio" type="radio" name="tier" value="Silver">
+              <label for="silver-radio">Silver</label>
+              <input id="gold-radio" type="radio" name="tier" value="Gold">
+              <label for="gold-radio">Gold</label>
+              <input id="plat-radio" type="radio" name="tier" value="Platinum">
+              <label for="plat-radio">Platinum</label>
+              <input id="hyper-radio" type="radio" name="tier" value="Hyper Platinum">
+              <label for="hyper-radio">Hyper Platinum</label>
             </form> 
           </div>
         </div>

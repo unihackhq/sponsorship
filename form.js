@@ -1,3 +1,10 @@
+function getTableListener(tierCode) {
+  return function() {
+    document.getElementById(tierCode + '-radio').click();
+    document.getElementById('enquire').scrollIntoView();
+  };
+}
+
 function checkedAddons() {
     var selectedInputs = document.querySelectorAll('#addons :checked');
 
@@ -29,7 +36,14 @@ function enquireButtonClicked() {
 }
 
 function addEventListeners() {
-    document.getElementById('enquireButton').addEventListener('click', enquireButtonClicked);
+  document.getElementById('enquireButton').addEventListener('click', enquireButtonClicked);
+
+  var codes = ['com', 'silver', 'gold', 'plat', 'hyper'];
+  for (var i = 0; i < codes.length; i++) {
+    var code = codes[i];
+    var listener = getTableListener(code);
+    document.getElementById(code + '-table').addEventListener('click', listener);
+  }
 }
 
 document.addEventListener("DOMContentLoaded", addEventListeners);
