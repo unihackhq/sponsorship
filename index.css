@@ -1,9 +1,112 @@
-html {
-  font-size: 16px;
+/* override inline css hiding non formatted content */
+body > :not(.above-fold) {
+  visibility: visible;
 }
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  line-height: 1.5;
+
+/* Tiny bit of normalize */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * GENERAL STUFF
+ */
+.btn {
+  -webkit-appearance: none;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+  margin: 0;
+  padding: .7em 1.3em;
+  text-align: center;
+  text-decoration: none;
+}
+.btn:hover {
+  background: #e6e6e6;
+}
+.btn:active {
+  background: #d9d9d9;
+}
+
+
+/*
+ * PACKAGES TABLE
+ */
+.pkg-table {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.pkg-table__row,
+.pkg-table__header {
+  flex: 0 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px #ccc solid;
+}
+
+.pkg-table__row:last-child {
+  border: none;
+}
+
+.pkg-table__content-cell,
+.pkg-table__cell {
+  padding: 20px 10px;
+}
+
+.pkg-table__content-cell {
+  flex: 1 0 30px;
+}
+
+.pkg-table__cell {
+  flex: 1 1 1px;
+  text-align: center;
+  font-weight: 700;
+  margin: 10px;
+}
+
+.pkg-table__header .pkg-table__cell {
+  border-radius: 10px;
+}
+
+.pkg-table__content-cell,
+.pkg-table__cell {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.pkg-table__title__sup {
+  font-style: italic;
+}
+
+.pkg-table__title {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.pkg-table__row .pkg-table__cell {
+  font-size: 1.2em;
+}
+
+.pkg-table__cell[data-included=y],
+.pkg-table__cell[data-included=n] {
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pkg-table__cell[data-included=y] {
+  background-image: url(tick.svg);
+}
+
+.pkg-table__cell[data-included=n] {
+  background-image: url(cross.svg);
 }
 
 .perks-row {

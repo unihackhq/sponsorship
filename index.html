@@ -10,50 +10,286 @@
     <meta name="description" content="UNIHACK Sponsorship">
     <meta name="keywords" content="unihack,hackathon,sponsorship">
 
-    <!-- load css async -->
-    <link rel="preload" href="normalize.css" as="style" onload="this.rel='stylesheet'">
     <!-- render above the fold content -->
     <style type="text/css">
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        line-height: 1.5;
+      }
+      h1 {
+        font-size: 2em;
+      }
+
+      /* hide anything not styled here */
+      body > :not(.above-fold) {
+        visibility: hidden;
+      }
+
       .container {
-        max-width: 900px;
+        max-width: 1000px;
         margin: auto;
-        padding: 0 20px;
+        padding: 20px;
       }
 
       .image-section {
-        min-height: 40vh;
+        min-height: 60vh;
       }
 
       .hero {
         background: #ccc;
         display: flex;
         justify-content: center;
+        position: relative;
+        background-image: url(hero.jpg);
+        background-size: cover;
+        background-position: center;
+        color: #fff;
       }
 
       .hero .container {
-        flex: 0 1 900px;
+        flex: 0 1 1000px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: start;
       }
+
+      .hero p {
+        margin: 0;
+        margin-bottom: 1em;
+        background: white;
+        color: black;
+        padding: 7px 20px;
+        font-size: 1.4em;
+      }
+
+      .hero-logo {
+        position: absolute;
+        top: 20px;
+        display: flex;
+      }
+
+      .hero-logo__img {
+        background-image: url(logo.svg);
+        background-size: 31px 40px;
+        height: 40px;
+        width: 31px;
+        margin: 4px 5px 4px 0;
+      }
+
+      .hero-logo__name {
+        margin: 0;
+        font-family: "Rubik",sans-serif;
+        font-weight: 500;
+        letter-spacing: -2px;
+      }
+
     </style>
-    <link rel="preload" href="index.css" as="style" onload="this.rel='stylesheet'">
+    <!-- load css async -->
+    <link rel="preload" href="normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:500" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="normalize.css">
+      <link rel="stylesheet" href="index.css">
+    </noscript>
+    <!-- preload polyfill for Firefox IE and Edge -->
+    <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
   </head>
   <body>
-    <section class="image-section hero">
+    <!-- HERO SECTION -->
+    <section class="image-section hero above-fold">
       <div class="container">
-        <h1>UNIHACK</h1>
+        <div class="hero-logo">
+          <div class="hero-logo__img"></div>
+          <h1 class="hero-logo__name">UNIHACK</h1>
+        </div>
         <p>Something something good!</p>
-        <p>- CEO of Botch</p>
+        <p>- CEO of Bosch</p>
       </div>
     </section>
-    <section class="container">
+    <!-- ABOUT UNIHACK SECTION -->
+    <section class="container above-fold">
       <h1>What is UNIHACK?</h1>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <a target="_blank" href="https://unihack.net/about/">About Us</a>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Amet nisl suscipit adipiscing bibendum est ultricies. Semper viverra nam libero justo. Amet massa vitae tortor condimentum. Aliquam etiam erat velit scelerisque in dictum. Nibh praesent tristique magna sit amet purus gravida. Lectus arcu bibendum at varius vel. Pellentesque dignissim enim sit amet venenatis urna. Ut lectus arcu bibendum at varius vel pharetra. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Purus in massa tempor nec feugiat nisl pretium fusce id. Sed arcu non odio euismod lacinia at quis risus sed. Amet massa vitae tortor condimentum lacinia quis vel eros. Vitae et leo duis ut diam quam nulla porttitor massa. Ultricies leo integer malesuada nunc vel risus.</p>
+      <p>Elementum eu facilisis sed odio morbi quis commodo odio aenean. Nunc sed augue lacus viverra vitae. Eleifend donec pretium vulputate sapien nec sagittis. Non nisi est sit amet facilisis magna. Mauris ultrices eros in cursus turpis massa. Nunc sed id semper risus in hendrerit. Integer vitae justo eget magna. In vitae turpis massa sed elementum tempus. Justo eget magna fermentum iaculis eu non diam phasellus. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nuncconsequatinterdum varius sit amet mattis vulputate enim nulla. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Urna molestie at elementum eu facilisis sed odio morbi.</p>
+      <a target="_blank" href="https://unihack.net/about/" class="btn">Learn More</a>
     </section>
+    <!-- PACKAGES TABLE SECTION -->
     <section class="container">
       <h1>Get Involved</h1>
       <!-- fake table -->
-      <div style="height: 500px; background: #aaa; display: flex; justify-content: center;">
-        <p style="margin: auto;">Packages</p>
+      <div class="pkg-table">
+        <div class="pkg-table__header">
+          <div class="pkg-table__content-cell">
+            Packages
+          </div>
+          <div class="pkg-table__cell" style="background: #07617d; color: #fff;">
+            <div class="pkg-table__title">
+              Community
+            </div>
+            <div class="pkg-table__price">
+              $750
+            </div>
+          </div>
+          <div class="pkg-table__cell" style="background: #c8c8c8;">
+            <div class="pkg-table__title">
+              Silver
+            </div>
+            <div class="pkg-table__price">
+              $1,500
+            </div>
+          </div>
+          <div class="pkg-table__cell" style="background: #ffc300;">
+            <div class="pkg-table__title">
+              Gold
+            </div>
+            <div class="pkg-table__price">
+              $5,000
+            </div>
+          </div>
+          <div class="pkg-table__cell" style="background: #8c8c8c;">
+            <div class="pkg-table__title">
+              Platinum
+            </div>
+            <div class="pkg-table__price">
+              $10,000
+            </div>
+          </div>
+          <div class="pkg-table__cell" style="background: #2e383f; color: #fff;">
+            <div class="pkg-table__title__sup">
+              hyper
+            </div>
+            <div class="pkg-table__title">
+              Platinum
+            </div>
+            <div class="pkg-table__price">
+              $30,000
+            </div>
+          </div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Company Giveaways
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            API & Tools Roundup
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Mailouts and Announcements
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Mentors
+          </div>
+          <div class="pkg-table__cell">–</div>
+          <div class="pkg-table__cell">1</div>
+          <div class="pkg-table__cell">2</div>
+          <div class="pkg-table__cell">4</div>
+          <div class="pkg-table__cell">6</div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Guests
+          </div>
+          <div class="pkg-table__cell">–</div>
+          <div class="pkg-table__cell">1</div>
+          <div class="pkg-table__cell">2</div>
+          <div class="pkg-table__cell">3</div>
+          <div class="pkg-table__cell">4</div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Run Recruitment Campagins
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Your Company Logo on all UNIHACK merchandise
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Video Promotions
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Your Company Logo on all UNIHACK 
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Careers Fair
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Judging Panel
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            Company Name beside UNIHACK logo
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
       </div>
     </section>
     <section class="container">
