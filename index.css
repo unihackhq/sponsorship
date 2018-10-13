@@ -37,9 +37,12 @@ html {
 /*
  * PACKAGES TABLE
  */
+
+/* general structure */
 .pkg-table {
   display: flex;
   flex-flow: column nowrap;
+  word-break: break-word;
 }
 
 .pkg-table__row,
@@ -60,7 +63,7 @@ html {
 }
 
 .pkg-table__content-cell {
-  flex: 1 0 30px;
+  flex: 1 0 40px;
 }
 
 .pkg-table__cell {
@@ -70,18 +73,19 @@ html {
   margin: 10px;
 }
 
+/* table header section */
+.pkg-table__header .pkg-table__content-cell,
 .pkg-table__header .pkg-table__cell {
-  border-radius: 10px;
-}
-
-.pkg-table__content-cell,
-.pkg-table__cell {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
 }
 
-.pkg-table__title__sup {
+.pkg-table__header .pkg-table__cell {
+  border-radius: 10px;
+}
+
+.pkg-table__title-sup {
   font-style: italic;
 }
 
@@ -90,6 +94,47 @@ html {
   margin-bottom: 10px;
 }
 
+/* perk description section (left column) */
+.pkg-table__row .pkg-table__content-cell {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.pkg-table__perk-desc {
+  flex: 1 1 auto;
+}
+
+.pkg-table__more-info {
+  padding-left: 10px;
+  position: relative;
+}
+
+.pkg-table__more-info img {
+  display: block;
+  height: 20px;
+  width: 20px;
+  opacity: 60%;
+}
+
+.pkg-table__more-info__floating {
+  z-index: 999;
+  display: none;
+  position: absolute;
+  width: 300px;
+  top: -20px;
+  left: 70%;
+  padding: 10px;
+  background: #fff;
+  border: #ddd solid 1px;
+  border-radius: 4px;
+}
+
+.pkg-table__more-info:hover .pkg-table__more-info__floating {
+  display: block;
+}
+
+/* table body section */
 .pkg-table__row .pkg-table__cell {
   font-size: 1.2em;
 }
@@ -109,6 +154,9 @@ html {
   background-image: url(cross.svg);
 }
 
+/*
+ * PERKS DETAILS
+ */
 .perks-row {
   display: flex;
   flex-flow: row nowrap;
@@ -124,6 +172,9 @@ html {
   background: #ccc;
 }
 
+/*
+ * FOOTER
+ */
 footer {
   background: #ccc;
   margin-top: 20px;
