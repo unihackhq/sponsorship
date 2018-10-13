@@ -35,6 +35,7 @@
       }
     </style>
     <link rel="preload" href="index.css" as="style" onload="this.rel='stylesheet'">
+    <script src="form.js"></script>
   </head>
   <body>
     <section class="image-section hero">
@@ -84,10 +85,43 @@
       </div>
     </section>
     <section class="container">
-      <h1>Interested?</h1>
-      <!-- fake form -->
-      <div style="height: 500px; background: #aaa; display: flex; justify-content: center;">
-        <p style="margin: auto;">CTA section</p>
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <button>Download Prospectus</button>
+      </div>
+    </section>
+    <section class="container">
+      <a name="interested"><h1>Interested?</h1></a>
+      <div style="display: flex; flex-direction: column;">
+        <div style="display: flex">
+          <div style="flex: 1 0 0;">
+            <p>Pick a tier:</p>
+          </div>
+          <div style="flex: 2 0 0;">
+            <form id="tiers">
+              <input type="radio" name="tier" value="1">Tier 1
+              <input type="radio" name="tier" value="2">Tier 2
+              <input type="radio" name="tier" value="3"> Tier 3
+            </form> 
+          </div>
+        </div>
+        <div style="display: flex">
+          <div style="flex: 1 0 0;">
+            <p>Add-ons:</p>
+          </div>
+          <div style="flex: 2 0 0;">
+            <form id="addons">
+              <input type="checkbox" name="addons" value="Ice Cream">Ice Cream<br>
+              <input type="checkbox" name="addons" value="Fidget Spinners">Fidget Spinners<br>
+            </form>
+          </div>
+        </div>
+      </div>
+      <button id="enquireButton">Enquire</button>
+      <div>
+        <h3>Don’t see what you’re looking for?</h2>
+        <h3>Not sure which is best?</h2>
+        <p>We are happy to discuss customisations according to your needs. Send us an email and we’ll follow-up within 24 hours.</p>
+        <a href="mailto:sponsorship@melbourne.unihack.net?subject=General Sponsorship Enquiry">Enquire</a>
       </div>
     </section>
     <footer>
