@@ -169,6 +169,34 @@ html {
   background-image: url(cross.svg);
 }
 
+/* addons */
+.pkg-addons {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.pkg-addons__item {
+  flex: 1 1 1px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-right: 10px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.pkg-addons__title {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.pkg-addons__price {
+  font-size: 1.2em;
+}
+
 /*
  * PERKS DETAILS
  */
