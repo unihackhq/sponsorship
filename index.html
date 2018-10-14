@@ -66,12 +66,27 @@
       }
 
       .hero p {
+        display: inline-block;
         margin: 0;
-        margin-bottom: 1em;
         background: white;
         color: black;
-        padding: 7px 20px;
+        padding: 8px 14px;
         font-size: 1.4em;
+      }
+
+      .hero .quote {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+      }
+
+      .hero .quote p:not(:first-child) {
+        padding-top: 0;
+        margin-top: -8px;
+      }
+
+      .hero p.quote-from {
+        font-size: 1em;
       }
 
       .hero-logo {
@@ -115,8 +130,11 @@
           <div class="hero-logo__img"></div>
           <h1 class="hero-logo__name">UNIHACK</h1>
         </div>
-        <p>Something something good!</p>
-        <p>- CEO of Bosch</p>
+        <div class="quote">
+          <p>Blown away by the great ideas at #UNIHACK2015!</p>
+          <p>Makes judging very difficult</p>
+        </div>
+        <p class="quote-from">- Hadi Micheal (SE at Deloitte)</p>
       </div>
     </section>
     <!-- ABOUT UNIHACK SECTION -->
