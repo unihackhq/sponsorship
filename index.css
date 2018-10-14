@@ -197,49 +197,49 @@ a.btn {
  * FOOTER
  */
 /* Footer */
-#gl-foot {
+.gl-foot {
   background: #e9e9e9;
 }
-#gl-foot .container {
+.gl-foot .container {
   position: relative;
   overflow: hidden;
   padding: 48px 20px;
 }
 @media screen and (max-width: 48em) {
-  #gl-foot .container {
+  .gl-foot .container {
     text-align: center;
   }
 }
-#gl-foot p {
+.gl-foot p {
   font-size: 0.75rem;
   margin: 0 0 4px;
   line-height: 1rem;
   text-transform: uppercase;
   color: #888;
 }
-#gl-foot p.copyright {
+.gl-foot p.copyright {
   margin: 15px 0 5px;
 }
-#gl-foot .heart {
+.gl-foot .heart {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path fill="#ff0000" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" /></svg>');
   text-indent: -999em;
   display: inline-block;
   width: 16px;
   height: 16px;
 }
-#gl-foot a {
+.gl-foot a {
   color: #555;
 }
-#gl-foot p.links {
+.gl-foot p.links {
   margin-bottom: 15px;
 }
-#gl-foot p.contact {
+.gl-foot p.contact {
   text-transform: none;
 }
-#gl-foot span.link + span.link:before {
+.gl-foot span.link + span.link:before {
   content: " • ";
 }
-#gl-foot a.coffeetime {
+.gl-foot a.coffeetime {
   cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" style="font-size:14px"><text y="16">☕️</text></svg>'),
     auto;
 }
