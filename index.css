@@ -22,7 +22,7 @@ html {
   color: #000;
   cursor: pointer;
   margin: 0;
-  padding: .7em 1.3em;
+  padding: .7em 1em;
   text-align: center;
   text-decoration: none;
 }
@@ -63,11 +63,11 @@ html {
 }
 
 .pkg-table__content-cell {
-  flex: 1 0 40px;
+  flex: 10 0 40px;
 }
 
 .pkg-table__cell {
-  flex: 1 1 1px;
+  flex: 9 1 1px;
   text-align: center;
   font-weight: 700;
   margin: 10px;
