@@ -1,5 +1,7 @@
 function ready() {
-  var buttons = Array.from(document.querySelectorAll('.pkg-mobile-selector__button'));
+  var buttons = Array.from(
+    document.querySelectorAll('.pkg-mobile-selector__button'),
+  );
   var container = document.querySelector('.pkg-container');
 
   buttons.map(function(button) {
@@ -10,4 +12,4 @@ function ready() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", ready);
+document.addEventListener('DOMContentLoaded', ready);
