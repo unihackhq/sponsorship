@@ -5,8 +5,8 @@ const ready = () => {
   );
   const container = document.querySelector('.pkg-container');
 
-  buttons.map((button) => {
-    button.addEventListener('click', (event) => {
+  buttons.map(button => {
+    button.addEventListener('click', event => {
       const package = event.target.dataset.package;
       container.dataset.package = package;
     });
@@ -16,11 +16,11 @@ const ready = () => {
   const infoButtons = Array.from(
     document.querySelectorAll('.pkg-table__more-info'),
   );
-  infoButtons.map((button) => {
-    button.addEventListener('click', (event) => {
+  infoButtons.map(button => {
+    button.addEventListener('click', event => {
       event.target.classList.toggle('active');
     });
   });
-}
+};
 
 document.addEventListener('DOMContentLoaded', ready);
