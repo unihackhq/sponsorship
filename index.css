@@ -175,14 +175,12 @@ html {
 }
 
 .pkg-table__more-info {
-  padding-left: 10px;
   position: relative;
-}
-
-.pkg-table__more-info img {
-  display: block;
   height: 20px;
-  width: 20px;
+  flex: 0 0 20px;
+  margin-left: 10px;
+  background: url('info.svg');
+  background-size: 20px 20px;
 }
 
 .pkg-table__more-info__floating {
@@ -269,6 +267,23 @@ html {
   .pkg-container[data-package='plat'] .pkg-table__cell:nth-child(5),
   .pkg-container[data-package='hyper'] .pkg-table__cell:nth-child(6) {
     display: flex !important;
+  }
+
+
+  .pkg-table__more-info.active {
+    background: url('close.svg');
+    background-size: 20px 20px;
+  }
+
+  .pkg-table__more-info__floating {
+    display: none !important;
+    top: 30px;
+    left: -120px;
+  }
+
+  .pkg-table__more-info.active
+    .pkg-table__more-info__floating {
+    display: block !important;
   }
 }
 

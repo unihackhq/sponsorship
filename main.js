@@ -1,13 +1,24 @@
-function ready() {
-  var buttons = Array.from(
+const ready = () => {
+  // package selector for mobile
+  const buttons = Array.from(
     document.querySelectorAll('.pkg-mobile-selector__button'),
   );
-  var container = document.querySelector('.pkg-container');
+  const container = document.querySelector('.pkg-container');
 
-  buttons.map(function(button) {
-    button.addEventListener('click', function(event) {
-      var package = event.target.dataset.package;
+  buttons.map((button) => {
+    button.addEventListener('click', (event) => {
+      const package = event.target.dataset.package;
       container.dataset.package = package;
+    });
+  });
+
+  // info button in table
+  const infoButtons = Array.from(
+    document.querySelectorAll('.pkg-table__more-info'),
+  );
+  infoButtons.map((button) => {
+    button.addEventListener('click', (event) => {
+      event.target.classList.toggle('active');
     });
   });
 }
