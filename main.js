@@ -21,6 +21,20 @@ const ready = () => {
       event.target.classList.toggle('active');
     });
   });
+
+  const hashLinks = Array.from(
+    document.querySelectorAll('[data-hash]'),
+  );
+  hashLinks.map(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const hash = event.target.dataset.hash;
+      document.getElementById(hash).scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });;
+    });
+  });
 };
 
 document.addEventListener('DOMContentLoaded', ready);
