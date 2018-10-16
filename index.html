@@ -147,6 +147,12 @@
         height: 40px;
         width: 31px;
         margin: 4px 5px 4px 0;
+        float: left;
+      }
+
+      .hero-logo__link {
+        text-decoration: none;
+        color: inherit;
       }
 
       .hero-logo__name {
@@ -154,6 +160,7 @@
         font-family: "Rubik", sans-serif;
         font-weight: 500;
         letter-spacing: -2px;
+        float: left;
       }
 
       /* about section */
@@ -240,8 +247,10 @@
     <section class="image-section hero above-fold">
       <div class="container">
         <div class="hero-logo">
-          <div class="hero-logo__img"></div>
-          <h1 class="hero-logo__name">UNIHACK</h1>
+          <a class="hero-logo__link" href="//unihack.net">
+            <div class="hero-logo__img"></div>
+            <h1 class="hero-logo__name">UNIHACK</h1>
+          </a>
         </div>
         <div class="hero-quote">
           <p class="quote">
