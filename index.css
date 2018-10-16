@@ -3,6 +3,38 @@ body > :not(.above-fold) {
   visibility: visible;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.container:before {
+  width: 5px;
+  background: black;
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: "";
+}
+
+ul li {
+  margin-bottom: 4px;
+}
+
 /* Tiny bit of normalize */
 html {
   box-sizing: border-box;
@@ -318,13 +350,6 @@ html {
   .pkg-table__more-info.active .pkg-table__more-info__floating {
     display: block !important;
   }
-
-  .perks-row {
-    flex-flow: column !important;
-  }
-  .perks-row:nth-child(even) {
-    flex-flow: column-reverse !important;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -343,17 +368,15 @@ html {
  * PERKS DETAILS
  */
 .perks-row {
-  display: flex;
-  flex-flow: row nowrap;
-  min-height: 250px;
-}
-
-.perks-col {
-  flex: 1 1 50%;
+  display: block;
+  padding: 10px;
+  border: 3px solid #2c383e;
+  margin-bottom: 8px;
 }
 
 .perks-col.text {
-  padding: 20px;
+  color: #2c383e;
+  padding: 20px 10px 0;
 }
 
 .perks-col.pic {
@@ -364,12 +387,59 @@ html {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .perks-row {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  .perks-row:nth-child(2n + 1) {
+    flex-direction: row-reverse;
+  }
+
+  .perks-col {
+    flex: 1 1 50%;
+  }
+
+  .perks-col.text {
+    padding: 10px 10px 10px 20px;
+  }
+
+  .perks-row:nth-child(2n + 1) .perks-col.text {
+    padding: 10px 20px 10px 10px;
+  }
+}
+
+/*
+ * ENQUIRE
+ */
+
+.bg-wrapper#enquire {
+  background: #2c383e;
+  text-align: left;
+}
+
+.bg-wrapper#enquire h1,
+.bg-wrapper#enquire h2 {
+  color: #ffcb25;
+}
+
+.bg-wrapper#enquire p,
+.bg-wrapper#enquire p > a {
+  color: #c6c6c6;
+}
+
+.bg-wrapper#enquire a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /*
  * FOOTER
  */
-/* Footer */
 .gl-foot {
   background: #e9e9e9;
 }
