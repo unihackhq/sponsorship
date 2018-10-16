@@ -214,7 +214,7 @@ html {
   height: 20px;
   flex: 0 0 20px;
   margin-left: 10px;
-  background: url("info.svg");
+  background: url("images/info.svg");
   background-size: 20px 20px;
 }
 
@@ -248,11 +248,11 @@ html {
 }
 
 .pkg-table__cell[data-included="y"] {
-  background-image: url(tick.svg);
+  background-image: url("images/tick.svg");
 }
 
 .pkg-table__cell[data-included="n"] {
-  background-image: url(cross.svg);
+  background-image: url("images/cross.svg");
 }
 
 /* addons */
@@ -305,7 +305,7 @@ html {
   }
 
   .pkg-table__more-info.active {
-    background: url("close.svg");
+    background: url("images/close.svg");
     background-size: 20px 20px;
   }
 
