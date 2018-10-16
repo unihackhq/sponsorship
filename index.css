@@ -318,6 +318,13 @@ html {
   .pkg-table__more-info.active .pkg-table__more-info__floating {
     display: block !important;
   }
+
+  .perks-row {
+    flex-flow: column !important;
+  }
+  .perks-row:nth-child(even) {
+    flex-flow: column-reverse !important;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -342,12 +349,21 @@ html {
 }
 
 .perks-col {
-  flex: 1 1 0;
+  flex: 1 1 50%;
+}
+
+.perks-col.text {
   padding: 20px;
 }
 
 .perks-col.pic {
   background: #ccc;
+}
+
+.perks-col.pic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 /*
