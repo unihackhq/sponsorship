@@ -22,18 +22,6 @@ const ready = () => {
     });
   });
 
-  const hashLinks = Array.from(document.querySelectorAll('[data-hash]'));
-  hashLinks.map(link => {
-    link.addEventListener('click', event => {
-      event.preventDefault();
-      const hash = event.target.dataset.hash;
-      document.getElementById(hash).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    });
-  });
-
   const selector = document.querySelector('.pkg-mobile-selector');
   const scrollListener = event => {
     const top = selector.getBoundingClientRect().top;
@@ -43,7 +31,7 @@ const ready = () => {
       selector.classList.remove('sticky');
     }
   };
-  window.addEventListener('scroll', scrollListener);
+  window.addEventListener('scroll', scrollListener, { passive: true });
   scrollListener();
 };
 

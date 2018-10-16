@@ -6,6 +6,7 @@ body > :not(.above-fold) {
 /* Tiny bit of normalize */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
