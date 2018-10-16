@@ -151,19 +151,29 @@ html {
 .pkg-table__header .pkg-table__cell {
   flex-flow: column nowrap;
   justify-content: center;
-}
-
-.pkg-table__header .pkg-table__cell {
   border-radius: 10px;
 }
 
 .pkg-table__title-sup {
   font-style: italic;
+  line-height: 1;
+  height: 1em;
+  margin-top: -8px;
 }
 
 .pkg-table__title {
-  font-size: 1.3em;
-  margin-bottom: 10px;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.pkg-table__price:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.pkg-table__max {
+  font-weight: normal;
+  font-size: 0.8em;
+  height: 1.2em;
 }
 
 /* perk description section (left column) */

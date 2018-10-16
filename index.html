@@ -54,6 +54,7 @@
         min-height: 60vh;
       }
 
+      /* hero section */
       .hero {
         background: #ccc;
         display: flex;
@@ -61,7 +62,7 @@
         position: relative;
         background-image: url(hero.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: top;
         color: #fff;
         margin-bottom: 75px;
       }
@@ -134,6 +135,7 @@
         position: absolute;
         top: 20px;
         display: flex;
+        color: #000;
       }
 
       .hero-logo__img {
@@ -151,6 +153,72 @@
         letter-spacing: -2px;
       }
 
+      /* about section */
+      .about-pills {
+        display: flex;
+      }
+
+      .about-pills__first,
+      .about-pills__second,
+      .about-pills__third {
+        padding: 20px 30px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+      }
+
+      .about-pills__first {
+        flex: 3 1 330px;
+        background: #2c383e;
+        color: #fff;
+        border-radius: 8px;
+        z-index: 3;
+      }
+
+      .about-pills__second {
+        flex: 1 1 220px;
+        background: #19607d;
+        color: #fff;
+        align-items: center;
+        text-align: center;
+        z-index: 2;
+        border-radius: 0 8px 8px 0;
+        margin-left: -10px;
+      }
+
+      .about-pills__third {
+        flex: 1 1 220px;
+        background: #fec40e;
+        align-items: center;
+        text-align: center;
+        z-index: 1;
+        border-radius: 0 8px 8px 0;
+        margin-left: -10px;
+      }
+
+      .about-pills__number {
+        font-size: 1.5em;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+
+      @media (max-width: 700px) {
+        .about-pills {
+          flex-flow: column nowrap;
+        }
+
+        .about-pills__first {
+          flex: 0 1 auto;
+        }
+
+        .about-pills__second,
+        .about-pills__third {
+          flex: 0 1 auto;
+          border-radius: 0 0 8px 8px;
+          margin: 0;
+          margin-top: -10px;
+        }
+      }
     </style>
     <!-- load css async -->
     <link rel="preload" href="normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -188,13 +256,29 @@
     <!-- ABOUT SECTION -->
     <section class="container above-fold">
       <h1>What is UNIHACK?</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Amet nisl suscipit adipiscing bibendum est ultricies. Semper viverra nam libero justo. Amet massa vitae tortor condimentum. Aliquam etiam erat velit scelerisque in dictum. Nibh praesent tristique magna sit amet purus gravida. Lectus arcu bibendum at varius vel. Pellentesque dignissim enim sit amet venenatis urna. Ut lectus arcu bibendum at varius vel pharetra. Rhoncus dolor purus non enim praesent elementum facilisis leo vel. Purus in massa tempor nec feugiat nisl pretium fusce id. Sed arcu non odio euismod lacinia at quis risus sed. Amet massa vitae tortor condimentum lacinia quis vel eros. Vitae et leo duis ut diam quam nulla porttitor massa. Ultricies leo integer malesuada nunc vel risus.</p>
-      <p>Elementum eu facilisis sed odio morbi quis commodo odio aenean. Nunc sed augue lacus viverra vitae. Eleifend donec pretium vulputate sapien nec sagittis. Non nisi est sit amet facilisis magna. Mauris ultrices eros in cursus turpis massa. Nunc sed id semper risus in hendrerit. Integer vitae justo eget magna. In vitae turpis massa sed elementum tempus. Justo eget magna fermentum iaculis eu non diam phasellus. Viverra orci sagittis eu volutpat odio facilisis mauris sit amet. Nuncconsequatinterdum varius sit amet mattis vulputate enim nulla. Condimentum id venenatis a condimentum vitae sapien pellentesque habitant. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Urna molestie at elementum eu facilisis sed odio morbi.</p>
-      <a target="_blank" rel="noreferrer" href="https://unihack.net/about/" class="btn">Learn More</a>
+      <p>UNIHACK is a 24-hour hackathon with the mission to provide a creative space for engineering, design and product students to build innovative projects that are ready to go to market. Come join us in the Imagination Revolution.</p>
+      <div class="about-pills">
+        <div class="about-pills__first">
+          <span>Hacking since 2014 with <b>five successful annual hackathons,</b> UNIHACK is Australia’s largest student hackathon.</span>
+        </div>
+        <div class="about-pills__second">
+          <div class="about-pills__number">
+            40%
+          </div>
+          year-on-year participant growth
+        </div>
+        <div class="about-pills__third">
+          <div class="about-pills__number">
+            35-50%
+          </div>
+          increase in sponsorship
+        </div>
+      </div>
+      <a target="_blank" rel="noreferrer" href="https://unihack.net/about/" class="btn margin-top">Learn More</a>
     </section>
 
     <!-- PACKAGES TABLE SECTION -->
-    <section class="container pkg-container" data-package="plat">
+    <section class="container pkg-container" data-package="com">
       <h1>Get Involved</h1>
       <div class="pkg-mobile-selector">
         <button class="pkg-mobile-selector__button" data-package="com">
@@ -219,9 +303,9 @@
           <div class="pkg-table__content-cell">
             Packages
           </div>
-          <div class="pkg-table__cell" style="background: #07617d; color: #fff;">
+          <div class="pkg-table__cell" style="background: #d28764;">
             <div class="pkg-table__title">
-              Community
+              Bronze
             </div>
             <div class="pkg-table__price">
               $750
@@ -242,6 +326,9 @@
             <div class="pkg-table__price">
               $5,000
             </div>
+            <div class="pkg-table__max">
+              Max 6 sponsors
+            </div>
           </div>
           <div class="pkg-table__cell" style="background: #8c8c8c;">
             <div class="pkg-table__title">
@@ -250,8 +337,11 @@
             <div class="pkg-table__price">
               $10,000
             </div>
+            <div class="pkg-table__max">
+              Max 1 sponsors
+            </div>
           </div>
-          <div class="pkg-table__cell" style="background: #2e383f; color: #fff;">
+          <div class="pkg-table__cell" style="background: #2c383e; color: #fff;">
             <div class="pkg-table__title-sup">
               hyper
             </div>
@@ -261,30 +351,16 @@
             <div class="pkg-table__price">
               $30,000
             </div>
+            <div class="pkg-table__max">
+              Max 2 sponsors
+            </div>
           </div>
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
             <div class="pkg-table__perk-desc">Company Giveaways</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
-            </div>
-          </div>
-          <div class="pkg-table__cell" data-included="y"></div>
-          <div class="pkg-table__cell" data-included="y"></div>
-          <div class="pkg-table__cell" data-included="y"></div>
-          <div class="pkg-table__cell" data-included="y"></div>
-          <div class="pkg-table__cell" data-included="y"></div>
-        </div>
-        <div class="pkg-table__row">
-          <div class="pkg-table__content-cell">
-            <div class="pkg-table__perk-desc">API & Tools Roundup</div>
-            <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Swag, tools and APIs.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="y"></div>
@@ -297,9 +373,7 @@
           <div class="pkg-table__content-cell">
             <div class="pkg-table__perk-desc">Mailouts and Announcements</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Get your brand out to our community.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="y"></div>
@@ -310,11 +384,35 @@
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
-            <div class="pkg-table__perk-desc">Mentors</div>
+            <div class="pkg-table__perk-desc">API & Tools Roundup</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Include branding on social media posts, marketing material.</div>
+            </div>
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            <div class="pkg-table__perk-desc">Custom Prizes</div>
+            <div class="pkg-table__more-info">
+              <div class="pkg-table__more-info__floating">Increase exposure for your brand, product or API through themed custom prizes.</div>
+            </div>
+          </div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            <div class="pkg-table__perk-desc">Send Mentors</div>
+            <div class="pkg-table__more-info">
+              <div class="pkg-table__more-info__floating">Work with students during the hackathon and find your next team hire.</div>
             </div>
           </div>
           <div class="pkg-table__cell">–</div>
@@ -325,11 +423,9 @@
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
-            <div class="pkg-table__perk-desc">Guests</div>
+            <div class="pkg-table__perk-desc">Send Guests</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Get your recruiters and business managers to check out our talent</div>
             </div>
           </div>
           <div class="pkg-table__cell">–</div>
@@ -340,11 +436,9 @@
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
-            <div class="pkg-table__perk-desc">Run Recruitment Campagins</div>
+            <div class="pkg-table__perk-desc">Your Company Logo on all UNIHACK Merchandise</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">including participant handbooks, t-shirts and banners.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="n"></div>
@@ -355,11 +449,9 @@
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
-            <div class="pkg-table__perk-desc">Your Company Logo on all UNIHACK merchandise</div>
+            <div class="pkg-table__perk-desc">Run Recruitment Campagins</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">On-the-day recruitment and job opportunity mailouts.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="n"></div>
@@ -372,9 +464,7 @@
           <div class="pkg-table__content-cell">
             <div class="pkg-table__perk-desc">Video Promotions</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Get interviewed to put the spotlight on your company.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="n"></div>
@@ -385,11 +475,9 @@
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
-            <div class="pkg-table__perk-desc">Your Company Logo on all UNIHACK </div>
+            <div class="pkg-table__perk-desc">Resume and Attendee List</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Receive resumes of competitors who opt-in.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="n"></div>
@@ -402,9 +490,7 @@
           <div class="pkg-table__content-cell">
             <div class="pkg-table__perk-desc">Careers Fair</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Engage with students before the hackathon.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="n"></div>
@@ -415,26 +501,74 @@
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
-            <div class="pkg-table__perk-desc">Judging Panel</div>
+            <div class="pkg-table__perk-desc">Tool Demo</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">Opt to sponsor a tool and demo it for 5 minutes during the Opening Ceremony</div>
+            </div>
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            <div class="pkg-table__perk-desc">Exclusively Host Info Night</div>
+            <div class="pkg-table__more-info">
+              <div class="pkg-table__more-info__floating">Host participants on the night they form teams pre-hackathon and flaunt your company culture.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="n"></div>
           <div class="pkg-table__cell" data-included="n"></div>
           <div class="pkg-table__cell" data-included="n"></div>
           <div class="pkg-table__cell" data-included="y"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            <div class="pkg-table__perk-desc">Opening & Closing Ceremony Keynote Speech</div>
+            <div class="pkg-table__more-info">
+              <div class="pkg-table__more-info__floating">Kick off the hackathon with a speech by your most esteemed representative.</div>
+            </div>
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            <div class="pkg-table__perk-desc">Pre-Hackathon Workshops or Webinars</div>
+            <div class="pkg-table__more-info">
+              <div class="pkg-table__more-info__floating">Work with the UNIHACK team to prepare and ease participants into using your tools on the day.</div>
+            </div>
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="y"></div>
+        </div>
+        <div class="pkg-table__row">
+          <div class="pkg-table__content-cell">
+            <div class="pkg-table__perk-desc">Judge Seat & Main Prize Presentation</div>
+            <div class="pkg-table__more-info">
+              <div class="pkg-table__more-info__floating">Get to judge all the hacks and present the main prizes.</div>
+            </div>
+          </div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
+          <div class="pkg-table__cell" data-included="n"></div>
           <div class="pkg-table__cell" data-included="y"></div>
         </div>
         <div class="pkg-table__row">
           <div class="pkg-table__content-cell">
             <div class="pkg-table__perk-desc">Company Name beside UNIHACK logo</div>
             <div class="pkg-table__more-info">
-              <div class="pkg-table__more-info__floating">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit aliquam etiam erat velit scelerisque.
-              </div>
+              <div class="pkg-table__more-info__floating">All promotions will have your company’s name.</div>
             </div>
           </div>
           <div class="pkg-table__cell" data-included="n"></div>
