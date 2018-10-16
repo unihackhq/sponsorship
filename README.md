@@ -9,17 +9,17 @@ remove old stuff
 rm -r docs; mkdir docs
 ```
 
-Minify HTML with
+Minify HTML with (you need html-minifier)
 ```
 html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css inline index.html -o docs/index.html
 ```
 
-Minify CSS with
+Minify CSS with (you need postcss-cli and cssnano)
 ```
 postcss --no-map index.css -o docs/index.css -u cssnano; postcss --no-map normalize.css -o docs/normalize.css -u cssnano
 ```
 
-Minify JS with
+Minify JS with (you need uglify-es)
 ```
 uglifyjs  --compress --mangle -o docs/main.js -- main.js
 ```
