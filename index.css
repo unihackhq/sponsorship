@@ -152,13 +152,13 @@ html {
   flex-flow: column nowrap;
   justify-content: center;
   border-radius: 10px;
-  padding-top: 15px;
 }
 
 .pkg-table__title-sup {
   font-style: italic;
   line-height: 1;
   height: 1em;
+  margin-top: -8px;
 }
 
 .pkg-table__title {
@@ -166,7 +166,7 @@ html {
   margin-bottom: 5px;
 }
 
-.pkg-table__price {
+.pkg-table__price:not(:last-child) {
   margin-bottom: 5px;
 }
 
