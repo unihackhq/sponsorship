@@ -26,13 +26,17 @@
         background: #f3f3f3;
       }
 
-      h1 {
-        font-size: 2em;
-      }
-
       h1, h2, h3, h4, h5, h6 {
         font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-        font-weight: 500;
+        font-weight: 400;
+        line-height: 1.5;
+        margin: 0 0 12px;
+      }
+
+      h1 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        margin-bottom: 8px;
       }
 
       /* hide anything not styled here */
@@ -59,36 +63,71 @@
         background-size: cover;
         background-position: center;
         color: #fff;
+        margin-bottom: 75px;
       }
 
       .hero .container {
         flex: 0 1 1000px;
         display: flex;
-        flex-flow: column nowrap;
-        align-items: start;
-      }
-
-      .hero p {
+        flex-flow: row nowrap;
+        align-items: flex-end;
         margin: 0;
-        background: white;
-        color: black;
-        padding: 8px 14px;
-        font-size: 1.4em;
       }
 
-      .hero .quote {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-start;
+      .hero .hero-quote {
+        margin-bottom: -100px;
       }
 
-      .hero .quote p:not(:first-child) {
-        padding-top: 0;
-        margin-top: -8px;
+      .hero p.quote {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        padding: 8px 0;
+        border-left: 20px solid #ffcb25;
+        max-width: 14em;
+        margin: 0;
+      }
+
+      .hero p.quote .highlight {
+        background-color: #ffcb25;
+        padding: 9px 0;
+        color: #202020;
+        display: inline;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .hero p.quote .highlight .offset {
+        position: relative;
+        left: -10px;
       }
 
       .hero p.quote-from {
-        font-size: 0.9em;
+        font-size: 0.875rem;
+        line-height: 1;
+        padding: 8px 10px;
+        margin: 0;
+        display: inline-block;
+        background: #202020;
+        color: #ffcb25;
+        font-weight: 400;
+      }
+
+      @media screen and (min-width: 768px) {
+        .hero {
+          margin-bottom: 0;
+        }
+        .hero .container {
+          align-items: center;
+        }
+        .hero .hero-quote {
+          margin-bottom: 0;
+        }
+        .hero p.quote {
+          font-size: 2.25rem;
+        }
+        .hero p.quote-from {
+          font-size: 1rem;
+        }
       }
 
       .hero-logo {
@@ -107,7 +146,7 @@
 
       .hero-logo__name {
         margin: 0;
-        font-family: "Rubik",sans-serif;
+        font-family: "Rubik", sans-serif;
         font-weight: 500;
         letter-spacing: -2px;
       }
@@ -116,7 +155,7 @@
     <!-- load css async -->
     <link rel="preload" href="normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:500" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:400,500" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
       <link rel="stylesheet" href="normalize.css">
       <link rel="stylesheet" href="index.css">
@@ -133,11 +172,16 @@
           <div class="hero-logo__img"></div>
           <h1 class="hero-logo__name">UNIHACK</h1>
         </div>
-        <div class="quote">
-          <p>Blown away by the great ideas at #UNIHACK2015!</p>
-          <p>Makes judging very difficult</p>
+        <div class="hero-quote">
+          <p class="quote">
+            <strong class="highlight">
+              <span class="offset">
+                Blown away by the great ideas at #UNIHACK2015! Makes judging very difficult
+              </span>
+            </strong>
+          </p>
+          <p class="quote-from">- Hadi Michel (SE at Deloitte)</p>
         </div>
-        <p class="quote-from">- Hadi Michel (SE at Deloitte)</p>
       </div>
     </section>
 
