@@ -21,6 +21,18 @@ const ready = () => {
       event.target.classList.toggle('active');
     });
   });
+
+  const selector = document.querySelector('.pkg-mobile-selector');
+  const scrollListener = event => {
+    const top = selector.getBoundingClientRect().top;
+    if (top < -150) {
+      selector.classList.add('sticky');
+    } else {
+      selector.classList.remove('sticky');
+    }
+  };
+  window.addEventListener('scroll', scrollListener, { passive: true });
+  scrollListener();
 };
 
 document.addEventListener('DOMContentLoaded', ready);
