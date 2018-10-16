@@ -369,14 +369,14 @@ html {
  */
 .perks-row {
   display: block;
-  padding: 10px;
   border: 3px solid #2c383e;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
 
 .perks-col.text {
   color: #2c383e;
-  padding: 20px 10px 0;
+  padding: 20px;
 }
 
 .perks-col.pic {
@@ -405,11 +405,7 @@ html {
   }
 
   .perks-col.text {
-    padding: 10px 10px 10px 20px;
-  }
-
-  .perks-row:nth-child(2n + 1) .perks-col.text {
-    padding: 10px 20px 10px 10px;
+    padding: 25px;
   }
 }
 
