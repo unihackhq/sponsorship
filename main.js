@@ -23,9 +23,10 @@ const ready = () => {
   });
 
   const selector = document.querySelector('.pkg-mobile-selector');
+  const table = document.querySelector('.pkg-table');
   const scrollListener = event => {
-    const top = selector.getBoundingClientRect().top;
-    if (top < -150) {
+    const rect = table.getBoundingClientRect();
+    if (rect.top < -50 && rect.bottom > 50) {
       selector.classList.add('sticky');
     } else {
       selector.classList.remove('sticky');
