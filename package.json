@@ -1,0 +1,24 @@
+{
+  "name": "sponsorship",
+  "version": "1.0.0",
+  "description": "UNIHACK Sponsorship website",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "prettier --write \"*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unihackhq/sponsorship.git"
+  },
+  "author": "UNIHACK Incorporated",
+  "bugs": {
+    "url": "https://github.com/unihackhq/sponsorship/issues"
+  },
+  "homepage": "https://github.com/unihackhq/sponsorship#readme",
+  "devDependencies": {
+    "prettier": "1.14.3"
+  }
+}
