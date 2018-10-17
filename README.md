@@ -24,7 +24,7 @@ Minify JS with (you need uglify-es)
 uglifyjs  --compress --mangle -o docs/main.js -- main.js
 ```
 
-Then copy all the images and svgs
+Then copy all the images and favicon
 ```
-cp images docs/ -r; cp *.svg docs/
+cp images docs/ -r; cp favicon.ico docs/
 ```
