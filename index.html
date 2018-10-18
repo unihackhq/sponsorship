@@ -21,6 +21,10 @@
     <link rel="apple-touch-icon" sizes="167x167" href="images/favicons/apple-touch-icon-167x167.png">
 
     <!-- render above the fold content -->
+    <link rel="preload" href="normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="normalize.css" />
+    </noscript>
     <style type="text/css">
       html {
         font-size: 16px;
@@ -49,7 +53,7 @@
       h1 {
         font-size: 2rem;
         letter-spacing: -1px;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
 
       /* hide anything not styled here */
@@ -60,7 +64,7 @@
       .container {
         max-width: 1000px;
         margin: auto;
-        padding: 24px;
+        padding: 28px 20px;
       }
 
       .image-section {
@@ -175,16 +179,18 @@
         display: flex;
       }
 
-      .about-pills__first,
-      .about-pills__second,
-      .about-pills__third {
+      .about-pills__segment {
         padding: 20px 30px;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
       }
 
-      .about-pills__first {
+      .about-pills__segment p {
+        margin: 0;
+      }
+
+      .about-pills__segment--first {
         flex: 3 1 330px;
         background: #2c383e;
         color: #fff;
@@ -192,7 +198,7 @@
         z-index: 3;
       }
 
-      .about-pills__second {
+      .about-pills__segment--second {
         flex: 1 1 220px;
         background: #19607d;
         color: #fff;
@@ -203,7 +209,7 @@
         margin-left: -10px;
       }
 
-      .about-pills__third {
+      .about-pills__segment--third {
         flex: 1 1 220px;
         background: #fec40e;
         align-items: center;
@@ -218,6 +224,22 @@
         font-weight: 700;
         margin-bottom: 3px;
         line-height: 1;
+        display: block;
+      }
+
+      .about-pills__highlight {
+        color: #fec40e;
+        font-weight: bold;
+      }
+
+      p.intro {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 480px) {
+        p.intro {
+          font-size: 1rem;
+        }
       }
 
       @media (max-width: 767px) {
@@ -225,12 +247,12 @@
           flex-flow: column nowrap;
         }
 
-        .about-pills__first {
+        .about-pills__segment--first {
           flex: 0 1 auto;
         }
 
-        .about-pills__second,
-        .about-pills__third {
+        .about-pills__segment--second,
+        .about-pills__segment--third {
           flex: 0 1 auto;
           border-radius: 0 0 8px 8px;
           padding: 30px 20px 20px;
@@ -240,12 +262,11 @@
       }
     </style>
     <!-- load css async -->
-    <link rel="preload" href="normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:400,500" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="index.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Rubik:400,500" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
-      <link rel="stylesheet" href="normalize.css">
-      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="index.css" />
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,500" />
     </noscript>
     <!-- preload polyfill for Firefox IE and Edge -->
     <script>!function(n){"use strict";n.loadCSS||(n.loadCSS=function(){});var o=loadCSS.relpreload={};if(o.support=function(){var e;try{e=n.document.createElement("link").relList.supports("preload")}catch(t){e=!1}return function(){return e}}(),o.bindMediaToggle=function(t){var e=t.media||"all";function a(){t.media=e}t.addEventListener?t.addEventListener("load",a):t.attachEvent&&t.attachEvent("onload",a),setTimeout(function(){t.rel="stylesheet",t.media="only x"}),setTimeout(a,3e3)},o.poly=function(){if(!o.support())for(var t=n.document.getElementsByTagName("link"),e=0;e<t.length;e++){var a=t[e];"preload"!==a.rel||"style"!==a.getAttribute("as")||a.getAttribute("data-loadcss")||(a.setAttribute("data-loadcss",!0),o.bindMediaToggle(a))}},!o.support()){o.poly();var t=n.setInterval(o.poly,500);n.addEventListener?n.addEventListener("load",function(){o.poly(),n.clearInterval(t)}):n.attachEvent&&n.attachEvent("onload",function(){o.poly(),n.clearInterval(t)})}"undefined"!=typeof exports?exports.loadCSS=loadCSS:n.loadCSS=loadCSS}("undefined"!=typeof global?global:this);</script>
@@ -275,18 +296,16 @@
     <!-- ABOUT SECTION -->
     <section class="container above-fold">
       <h1>What is UNIHACK?</h1>
-      <p>UNIHACK is a 24-hour hackathon with the mission to provide a creative space for engineering, design and product students to build innovative projects that are ready to go to market. Come join us in the Imagination Revolution.</p>
+      <p class="intro">UNIHACK is a 24-hour hackathon with the mission to provide a creative space for engineering, design and product students to build innovative projects that are ready to go to market. Come join us in the Imagination Revolution.</p>
       <div class="about-pills">
-        <div class="about-pills__first">
-          <span>Hacking since 2014 with <b>five successful annual hackathons,</b> UNIHACK is Australia’s largest student hackathon.</span>
+        <div class="about-pills__segment about-pills__segment--first">
+          <p>Hacking since 2014 with <strong>five successful annual hackathons,</strong> UNIHACK is <span class="about-pills__highlight">Australia’s largest student hackathon.</span></p>
         </div>
-        <div class="about-pills__second">
-          <span class="about-pills__number">40%</span>
-          year-on-year participant growth
+        <div class="about-pills__segment about-pills__segment--second">
+          <p><span class="about-pills__number">40%</span> year-on-year participant growth</p>
         </div>
-        <div class="about-pills__third">
-          <span class="about-pills__number">35-50%</span>
-          increase in sponsorship
+        <div class="about-pills__segment about-pills__segment--third">
+          <p><span class="about-pills__number">35-50%</span> increase in sponsorship</p>
         </div>
       </div>
       <a target="_blank" rel="noreferrer" href="https://unihack.net/about/" class="btn margin-top">Learn More</a>
@@ -298,7 +317,7 @@
       <div class="pkg-mobile-selector">
         <div class="pkg-mobile-selector__container">
           <button class="pkg-mobile-selector__button" data-package="com">
-            Community
+            Bronze
           </button>
           <button class="pkg-mobile-selector__button" data-package="silver">
             Silver
@@ -623,6 +642,31 @@
         </div>
       </div>
       <a href="#enquire" class="btn primary margin-top" data-hash="enquire">Interested?</a>
+    </section>
+
+    <!-- PAST SPONSORS -->
+    <section class="bg-wrapper past-sponsors-wrapper">
+      <div class="container">
+        <h1>Previous Sponsors</h1>
+        <div class="past-sponsors__grid">
+          <img src="./images/logos/facebook.png" alt="Facebook" />
+          <img src="./images/logos/atlassian.png" alt="Atlassian" />
+          <img src="./images/logos/microsoft.png" alt="Microsoft" />
+          <img src="./images/logos/bosch.png" alt="Bosch" />
+          <img src="./images/logos/xero.png" alt="Xero" />
+          <img src="./images/logos/rea.png" alt="REA Group" />
+          <img src="./images/logos/telstra.png" alt="Telstra" />
+          <img src="./images/logos/auspost.png" alt="Australia Post" />
+          <img src="./images/logos/pwc.png" alt="PwC" />
+          <img src="./images/logos/infosys.png" alt="Infosys" />
+          <img src="./images/logos/github.png" alt="GitHub" />
+          <img src="./images/logos/adobe.png" alt="Adobe" />
+          <img src="./images/logos/data61.png" alt="Data61" />
+          <img src="./images/logos/uom.png" alt="University of Melbourne" />
+          <img src="./images/logos/monash.png" alt="Monash University" />
+        </div>
+        <p>... and many more</p>
+      </div>
     </section>
 
     <!-- FEATURED PERKS SECTION -->

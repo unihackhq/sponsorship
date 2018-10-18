@@ -407,6 +407,45 @@ html {
 }
 
 /*
+ * PAST SPONSORS
+ */
+
+.past-sponsors-wrapper {
+  background: #fbfbfb;
+}
+
+.past-sponsors__grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 24px;
+}
+
+.past-sponsors__grid img {
+  width: 100%;
+  height: auto;
+}
+
+.past-sponsors-wrapper p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0;
+  color: #888;
+}
+
+@media (min-width: 768px) {
+  .past-sponsors__grid {
+    grid-gap: 24px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .past-sponsors-wrapper p {
+    font-size: 1.5rem;
+  }
+}
+
+/*
  * FOOTER
  */
 .gl-foot {
