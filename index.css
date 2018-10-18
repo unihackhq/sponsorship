@@ -436,7 +436,7 @@ html {
 
 @media (min-width: 768px) {
   .past-sponsors__grid {
-    grid-gap: 24px;
+    grid-gap: 24px 48px;
     grid-template-columns: repeat(5, 1fr);
   }
 
