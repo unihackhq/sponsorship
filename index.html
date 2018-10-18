@@ -21,9 +21,11 @@
     <link rel="apple-touch-icon" sizes="167x167" href="images/favicons/apple-touch-icon-167x167.png">
 
     <!-- render above the fold content -->
+    <link rel="preload" href="normalize.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link rel="stylesheet" href="normalize.css" />
+    </noscript>
     <style type="text/css">
-      @import "normalize.css";
-
       html {
         font-size: 16px;
       }
