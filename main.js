@@ -1,7 +1,7 @@
 const ready = () => {
   // package selector for mobile
   const buttons = Array.from(
-    document.querySelectorAll('.pkg-mobile-selector__button'),
+    document.querySelectorAll('.pkg-mobile-selector__button')
   );
   const container = document.querySelector('.pkg-container');
 
@@ -14,7 +14,7 @@ const ready = () => {
 
   // info button in table
   const infoButtons = Array.from(
-    document.querySelectorAll('.pkg-table__more-info'),
+    document.querySelectorAll('.pkg-table__more-info')
   );
   infoButtons.map(button => {
     button.addEventListener('click', event => {
