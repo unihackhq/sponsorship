@@ -337,9 +337,8 @@ html {
  */
 .perks-row {
   display: block;
-  border: 3px solid #2c383e;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  margin-bottom: 20px;
+  background-color: #fbfbfb;
 }
 
 .perks-col.text {
